@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Testimony{% endblock %}
+
+{% block body %}
+    <h1>Create new Testimony</h1>
+
+    {{ include('admin_testimony/_form.html.twig') }}
+
+    <a href="{{ path('app_admin_testimony_index') }}">back to list</a>
+{% endblock %}

@@ -1,0 +1,51 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Website index{% endblock %}
+
+{% block body %}
+    <h1>Website index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Price</th>
+                <th>Image</th>
+                <th>Link</th>
+                <th>CreatedAt</th>
+                <th>Date</th>
+                <th>ContentManagementSystem</th>
+                <th>Activity</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for website in websites %}
+            <tr>
+                <td>{{ website.id }}</td>
+                <td>{{ website.title }}</td>
+                <td>{{ website.description }}</td>
+                <td>{{ website.price }}</td>
+                <td>{{ website.image }}</td>
+                <td>{{ website.link }}</td>
+                <td>{{ website.createdAt ? website.createdAt|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ website.date ? website.date|date('Y-m-d') : '' }}</td>
+                <td>{{ website.contentManagementSystem }}</td>
+                <td>{{ website.activity }}</td>
+                <td>
+                    <a href="{{ path('app_admin_website_show', {'id': website.id}) }}">show</a>
+                    <a href="{{ path('app_admin_website_edit', {'id': website.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="11">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_admin_website_new') }}">Create new</a>
+{% endblock %}
