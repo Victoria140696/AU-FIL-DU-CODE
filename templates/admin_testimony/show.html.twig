@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Testimony{% endblock %}
+
+{% block body %}
+    <h1>Testimony</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ testimony.id }}</td>
+            </tr>
+            <tr>
+                <th>Message</th>
+                <td>{{ testimony.message }}</td>
+            </tr>
+            <tr>
+                <th>CreatedAt</th>
+                <td>{{ testimony.createdAt ? testimony.createdAt|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_admin_testimony_index') }}">back to list</a>
+
+    <a href="{{ path('app_admin_testimony_edit', {'id': testimony.id}) }}">edit</a>
+
+    {{ include('admin_testimony/_delete_form.html.twig') }}
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Website{% endblock %}
+
+{% block body %}
+    <h1>Create new Website</h1>
+
+    {{ include('admin_website/_form.html.twig') }}
+
+    <a href="{{ path('app_admin_website_index') }}">back to list</a>
+{% endblock %}
