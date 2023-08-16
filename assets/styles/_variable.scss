@@ -1,0 +1,49 @@
+$purple : #73658A;
+$blue : #257593;
+$brown : #BC7C61;
+$white : #FFFFFF;
+$burgundy : #7F253E;
+$grey : #E3E4E2;
+$green : #198754;
+$yellow : #ffc107;
+$gray-900 : #212529;
+$red : #dc3545;
+$pink :#B982AE ;
+$blue-ihoi :#405478;
+$blue-objetT : #303751;
+
+
+$primary: $blue;
+$primary-inverse : $grey;
+$secondary: $brown;
+$secondary-inverse: $burgundy;
+$tertiary : $pink;
+$success: $green;
+$info: $purple;
+$warning: $yellow;
+$danger: $red;
+$light: $white;
+$dark: $gray-900;
+$ihoi: $blue-ihoi;
+$objetT : $blue-objetT;
+
+
+$theme-colors: (
+    "primary": $primary,
+    "primary-inverse": $grey,
+    "secondary": $secondary,
+    "secondary-inverse": $secondary-inverse,
+    "success": $success,
+    "info": $info,
+    "warning": $warning,
+    "danger": $danger,
+    "light": $light,
+    "dark": $dark,
+    "tertiary": $tertiary,
+    "ihoi": $ihoi,
+    "objetT": $objetT
+
+);
+
+
+
