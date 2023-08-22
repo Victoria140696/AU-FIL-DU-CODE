@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello AdminController!{% endblock %}
+
+{% block body %}
+<h1>Administrer les contenus</h1>
+<div class="card" style="width: 18rem;">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Site internet</h5>
+    <a href="{{ path('app_admin_website_index') }}" class="btn btn-primary">Voir</a>
+  </div>
+</div>
+
+<div class="card" style="width: 18rem;">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Utilisateur</h5>
+    <a href="{{ path('app_admin_user_index') }}" class="btn btn-primary">Voir</a>
+  </div>
+</div>
+
+<div class="card" style="width: 18rem;">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Témoignage</h5>
+    <a href="{{ path('app_admin_testimony_index') }}" class="btn btn-primary">Voir</a>
+  </div>
+</div>
+
+<div class="card" style="width: 18rem;">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Catégorie</h5>
+    <a href="{{ path('app_admin_category_index') }}" class="btn btn-primary">Voir</a>
+  </div>
+</div>
+{% endblock %}
+
