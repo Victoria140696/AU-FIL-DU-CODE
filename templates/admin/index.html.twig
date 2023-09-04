@@ -3,8 +3,11 @@
 {% block title %}Hello AdminController!{% endblock %}
 
 {% block body %}
-<h1>Administrer les contenus</h1>
+<h1 class="d-flex justify-content-center m-5">Administrer les contenus</h1>
+
+<div class="text-center d-flex justify-content-around">
 <div class="card" style="width: 18rem;">
+
   <img src="..." class="card-img-top" alt="...">
   <div class="card-body">
     <h5 class="card-title">Site internet</h5>
@@ -35,7 +38,8 @@
     <a href="{{ path('app_admin_category_index') }}" class="btn btn-primary">Voir</a>
   </div>
 </div>
+</div>
 
-    <a href="{{ path('app_home') }}" class="btn btn-primary">Retour</a>
+    <a href="{{ path('app_home') }}" class="btn btn-primary m-5">Retour</a>
 {% endblock %}
 

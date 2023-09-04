@@ -3,9 +3,10 @@
 {% block title %}Website{% endblock %}
 
 {% block body %}
-    <h1>Website</h1>
+    <h1 class="d-flex justify-content-center m-5">Site internet</h1>
 
-    <table class="table">
+<div class="m-5 table-responsive">
+    <table class="table table-striped">
         <tbody>
             <tr>
                 <th>Id</th>
@@ -50,9 +51,10 @@
         </tbody>
     </table>
 
-    <a href="{{ path('app_admin_website_index') }}">back to list</a>
+    <a class="btn btn-info" href="{{ path('app_admin_website_index') }}">Retour</a>
 
-    <a href="{{ path('app_admin_website_edit', {'id': website.id}) }}">edit</a>
+    <a class="btn btn-primary" href="{{ path('app_admin_website_edit', {'id': website.id}) }}">Editer</a>
 
     {{ include('admin_website/_delete_form.html.twig') }}
+    </div>
 {% endblock %}

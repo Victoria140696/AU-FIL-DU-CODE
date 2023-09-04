@@ -3,22 +3,23 @@
 {% block title %}Website index{% endblock %}
 
 {% block body %}
-    <h1>Website index</h1>
+    <h1 class="d-flex justify-content-center m-5">Index des sites internet</h1>
 
-    <table class="table">
+    <div class="mx-5 table-responsive">
+    <table class="table table-striped">
         <thead>
             <tr>
                 <th>Id</th>
-                <th>Title</th>
+                <th>Titre</th>
                 <th>Description</th>
-                <th>Price</th>
+                <th>Prix</th>
                 <th>Image</th>
-                <th>Link</th>
-                <th>CreatedAt</th>
-                <th>Date</th>
+                <th>Lien</th>
+                <th>Date de création</th>
+                <th>Date d'ajout</th>
                 <th>ContentManagementSystem</th>
-                <th>Activity</th>
-                <th>actions</th>
+                <th>Activité</th>
+                <th>Actions</th>
             </tr>
         </thead>
         <tbody>
@@ -35,8 +36,8 @@
                 <td>{{ website.contentManagementSystem }}</td>
                 <td>{{ website.activity }}</td>
                 <td>
-                    <a href="{{ path('app_admin_website_show', {'id': website.id}) }}">show</a>
-                    <a href="{{ path('app_admin_website_edit', {'id': website.id}) }}">edit</a>
+                    <a class="btn btn-secondary" href="{{ path('app_admin_website_show', {'id': website.id}) }}">Voir</a>
+                    <a class="btn btn-danger" href="{{ path('app_admin_website_edit', {'id': website.id}) }}">Editer</a>
                 </td>
             </tr>
         {% else %}
@@ -47,5 +48,6 @@
         </tbody>
     </table>
 
-    <a href="{{ path('app_admin_website_new') }}">Create new</a>
+    <a class="btn btn-info m-2" href="{{ path('app_admin_website_new') }}">Ajouter</a>
+    </div>
 {% endblock %}
