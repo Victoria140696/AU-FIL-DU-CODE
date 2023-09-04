@@ -1,12 +1,36 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello ContactController!{% endblock %}
+{% block title %}Contact
+{% endblock %}
 
 {% block body %}
-<h1>Page contact</h1>
 
-<div>
-{{ form(form)}}
-</div>
 
-{% endblock %}
+	<div class="d-flex flex-row m-5">
+		<div class="bg-primary text-white p-5 rounded">
+			<h1>NOUS CONTACTER</h1>
+			<span>Vous êtes au bon endroit !</span>
+			<ul class="mt-5">
+				<i class="bi bi-envelope-fill fs-4"></i> Adresse E-mail
+			</i>
+		</ul>
+		<ul>
+			<i class="bi bi-telephone-fill fs-4"></i> N° de tél
+		</ul>
+		<ul>
+			<i class="bi bi-geo-alt-fill fs-4"></i> Localisation
+		</ul>
+
+        <div class="mt-5 text-black">
+		<i class="bi bi-facebook m-4 fs-3 bg-secondary p-2 rounded-circle"></i>
+		<i class="bi bi-discord m-4 fs-3 bg-body p-2 rounded-circle"></i>
+		<i class="bi bi-linkedin m-4 fs-3 bg-secondary p-2 rounded-circle"></i>
+        </div>
+	</div>
+
+	<div class="m-5">
+
+		{{ form(form)}}
+
+		</div>
+	{% endblock %}

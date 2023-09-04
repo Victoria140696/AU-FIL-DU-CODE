@@ -23,6 +23,7 @@ class ContactController extends AbstractController
             $name = $form->get('name')->getData();
             $firstname = $form->get('firstname')->getData();
             $email = $form->get('email')->getData();
+            $telephone = $form->get('telephone')->getData();
             $subject = $form->get('subject')->getData();
             $content = $form->get('content')->getData();
 
