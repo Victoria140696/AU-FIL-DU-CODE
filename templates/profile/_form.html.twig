@@ -1,4 +1,11 @@
-{{ form_start(form) }}
-    {{ form_widget(form) }}
-    <button class="btn">{{ button_label|default('Save') }}</button>
-{{ form_end(form) }}
+<section class="container">
+	<div class="col-lg-1 offset-lg-1 ">
+		{{ form_start(form) }}
+		{{ form_widget(form) }}
+
+		<div class="">
+			<button class="btn btn-info m-5">{{ button_label|default('Modifier') }}</button>
+			<div>
+
+				{{ form_end(form) }}
+				<div></section>

@@ -3,9 +3,9 @@
 {% block title %}New Website{% endblock %}
 
 {% block body %}
-    <h1>Create new Website</h1>
+    <h1 class="d-flex justify-content-center">Ajouter un nouveau site internet</h1>
 
     {{ include('admin_website/_form.html.twig') }}
 
-    <a href="{{ path('app_admin_website_index') }}">back to list</a>
+    <a class="btn btn-info" href="{{ path('app_admin_website_index') }}">Retour</a>
 {% endblock %}
